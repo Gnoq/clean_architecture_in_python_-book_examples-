@@ -21,16 +21,13 @@ class Calc:
             return "inf"
 
     def avg(self, it, lt= None, ut=None):
-        if not len(it):
-            return 0
+        _it = it[:]
 
-        if not lt:
-            lt = min(it)
+        if lt is not None:
+            _it = [x for x in _it if x >= lt]
 
-        if not ut:
-            ut = max(it)
-
-        _it = [x for x in it if lt <= x <= ut]
+        if ut is not None:
+            _it = [x for x in _it if x <= ut]
 
         if not len(_it):
             return 0
