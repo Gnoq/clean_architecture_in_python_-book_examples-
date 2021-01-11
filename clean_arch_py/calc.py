@@ -20,7 +20,7 @@ class Calc:
         except ZeroDivisionError:
             return "inf"
 
-    def avg(self, it, lt= None, ut=None):
+    def avg(self, it, lt=None, ut=None):
         _it = it[:]
 
         if lt is not None:
